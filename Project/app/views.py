@@ -4,13 +4,19 @@ from django.shortcuts import render, HttpResponse
 
 def index(request):
     context={
-        "variable":"This is Variable"
+        "data":"Home"
     }
     return render(request, 'index.html', context)
     #return HttpResponse("<h1 align='center'>Home Page<h1>")
 
 def about(request):
-    return HttpResponse("<h1 align='center'>About<h1>")
-
+    context={
+        "data":"About"
+    }
+    return render(request, 'about.html', context)
+    
 def contact(request):
-    return HttpResponse("<h1 align='center'>Contact Me<h1>")
+    context={
+        "data":"Contact"
+    }
+    return render(request, 'contact.html', context)
