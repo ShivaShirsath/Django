@@ -1,3 +1,44 @@
 {% extends "template.html" %}
 {% block title %}{{data}}{% endblock %}
-{% block content %}{{data}} Page{% endblock %}
+{% block content %}
+<div class="container-fluid my-0 px-0">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+	  <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+	  <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+	  <div class="carousel-item active" data-bs-interval="5000">
+		<img src="https://source.unsplash.com/2160x1080/?developer" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block" style="background: rgba(128, 64, 0, 0.6); border-radius:25px;">
+		  <h5>Developer</h5>
+		  <p>Develping the Web Applications, Computer Applications & Mobile Applications.</p>
+		</div>
+	  </div>
+	  <div class="carousel-item" data-bs-interval="5000">
+		<img src="https://source.unsplash.com/2160x1080/?programmer" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block" style="background: rgba(0, 128, 64, 0.6); border-radius:25px;">
+		  <h5>Programmer</h5>
+		  <p>Programming in C, C++, Java, Python.</p>
+		</div>
+	  </div>
+	  <div class="carousel-item" data-bs-interval="5000">
+		<img src="https://source.unsplash.com/2160x1080/?coder" class="d-block w-100" alt="...">
+		<div class="carousel-caption d-none d-md-block" style="background: rgba(64, 0, 128, 0.6); border-radius:25px;">
+		  <h5>Coder</h5>
+		  <p>Coding for Developing Logic & Knowledge.</p>
+		</div>
+	  </div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	  <span class="visually-hidden">Next</span>
+	</a>
+  </div>
+</div>
+{% endblock %}

@@ -1,3 +1,35 @@
 {% extends "template.html" %}
 {% block title %}{{data}}{% endblock %}
-{% block content %}{{data}} Page{% endblock %}
+{% block content %}
+<center>
+  <img src="https://source.unsplash.com/1600x900/?contact,phone" class="d-block w-100" alt="...">
+  <div class="container-fluid m-2 p-2" style="postion: fixed; top:2px;">
+	<form method="post" action="">
+	  {% csrf_token %}
+	  <div class="input-group">
+		<div class="form-floating m-1">
+		  <input type="text" name="firstname" class="form-control" placeholder="First" id="firstname" style="background: rgba(128, 128, 128, 0.6); border-radius:25px;">
+		  <label for="firstname">First Name</label>
+		</div>
+		<div class="form-floating m-1">
+		  <input type="text" name="lastname" class="form-control" placeholder="Last" id="lastname" style="background: rgba(128, 128, 128, 0.6); border-radius:25px;">
+		  <label for="lastname">Last Name</label>
+		</div>
+	  </div>	
+	  <div class="form-floating p-1">
+		<input type="email" name="email" class="form-control" placeholder="Email" id="email" style="background: rgba(128, 128, 128, 0.6); border-radius:25px;">
+		<label for="email">Email</label>
+	  </div>
+	  <div class="form-floating p-1">
+		<input type="number" name="phone" class="form-control" placeholder="Phone" id="phone" style="background: rgba(128, 128, 128, 0.6); border-radius:25px;">
+		<label for="phone">Phone</label>
+	  </div>
+	  <div class="form-floating p-1">
+		<textarea class="form-control" name="msg" placeholder="Leave a message here" id="msg" style="background: rgba(128, 128, 128, 0.6); border-radius:25px;"></textarea>
+		<label for="msg">Messege</label>
+	  </div>
+	  <button type="submit" class="btn btn-info col-sm-12 m-1" style="border-radius:25px;">Send</button>
+	</form>
+  </div>
+</center>
+{% endblock %}
