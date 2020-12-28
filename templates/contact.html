@@ -1,10 +1,11 @@
 {% extends "template.html" %}
 {% block title %}{{data}}{% endblock %}
 {% block content %}
+<div class="container-fluid m-0 p-0">
 <center>
   <img src="https://source.unsplash.com/1600x900/?contact,phone" class="d-block w-100" alt="...">
   <div class="container-fluid m-2 p-2" style="postion: fixed; top:2px;">
-	<form method="POST" action="contact">
+	<form method="POST">
 	  {% csrf_token %}
 	  <div class="input-group">
 		<div class="form-floating m-1">
@@ -28,8 +29,9 @@
 		<textarea class="form-control" name="msg" placeholder="Leave a message here" id="msg" style="background: rgba(128, 128, 128, 0.6); border-radius:25px;"></textarea>
 		<label for="msg">Messege</label>
 	  </div>
-	  <button type="submit" class="btn btn-info col-sm-12 m-1" style="border-radius:25px;">Send</button>
+	  <button type="submit" class="btn btn-info col-sm-10 m-1" style="border-radius: 25px;">Send</button>
 	</form>
   </div>
 </center>
+</div>
 {% endblock %}

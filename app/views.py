@@ -1,8 +1,9 @@
 from django.shortcuts import render, HttpResponse
 from datetime import datetime
 from app.models import Contact
-# Create your views here.
+from django.contrib import messages
 
+# Create your views here.
 def index(request):
     context={
         "data":"Home"
@@ -28,4 +29,5 @@ def contact(request):
         msg = request.POST.get('msg')
         contact = Contact(firstname=firstname, lastname=lastname, email=email, phone=phone, msg=msg, date=datetime.today())
         contact.save()
+        messages.success(request, 'Messege sended to admin !')
     return render(request, 'contact.html', context)
