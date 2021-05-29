@@ -3,7 +3,7 @@
 ```bash
 pip install django
 ```
-#### Or
++ Or
 ```bash
 pip install django --upgrade
 ```
