@@ -1,9 +1,9 @@
 # Django
 ### Installing 
-'''bash
+```bash
 pip install django
-'''
+```
 #### Or
-'''bash
+```bash
 pip install django --upgrade
-'''
+```
