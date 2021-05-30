@@ -1,9 +1,9 @@
 # Django
-### Installing 
+### Install
    ```bash
    pip install django
    ```
-   Or
+### Upgrade
    ```bash
    pip install django --upgrade
    ```
@@ -19,4 +19,5 @@
    ```bash
    python manage.py runserver
    ```
-   [http://127.0.0.1:8000](http://127.0.0.1:8000)
+### Open Server : http://127.0.0.1:8000
+### Edit file & Save it
